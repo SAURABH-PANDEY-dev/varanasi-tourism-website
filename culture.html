@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture & Food - Varanasi Tourism</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="index.html" class="w3-bar-item w3-button w3-wide">VARANASI</a>
+        <div class="w3-right w3-hide-small">
+          <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+          <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="places.html" class="w3-bar-item w3-button">PLACES</a>
+          <a href="culture.html" class="w3-bar-item w3-button">CULTURE & FOOD</a>
+          <a href="gallery.html" class="w3-bar-item w3-button">GALLERY</a>
+          <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="toggleTheme()">
+            <i class="fa fa-moon-o" id="theme-icon"></i>
+        </a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (collapsible) -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top: 46px">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+      <a href="places.html" class="w3-bar-item w3-button w3-padding-large">PLACES</a>
+      <a href="culture.html" class="w3-bar-item w3-button w3-padding-large">CULTURE & FOOD</a>
+      <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large">GALLERY</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+    </div>
+
+    <!-- Main Page Content -->
+    <main class="w3-container w3-content w3-padding-64" style="max-width:900px">
+        <h1 class="w3-center w3-wide">CULTURE & FOOD</h1>
+
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-padding-large">
+                <article>
+                    <h2>Festivals</h2>
+                    <p class="w3-justify">Varanasi is a city of festivals, with a calendar full of vibrant celebrations. On **Maha Shivaratri**, a grand procession celebrating Lord Shiva fills the streets. Another spectacular event is the **Ganga Mahotsav**, which culminates in Dev Deepawali, the "festival of lights of the Gods." On this night, thousands of pilgrims release lighted lamps (diyas) to float in the Ganges, transforming the riverfront into a breathtaking celestial pathway. These festivals showcase the city's deep spiritual devotion and are an incredible sight to behold.</p>
+                </article>
+            </div>
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+               <img src="images/dev-depawali.jpg" class="w3-round w3-image" alt="Varanasi Festivals" style="width:100%">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+               <img src="images/dina-chat-bhandar.jpg" class="w3-round w3-image" alt="Varanasi Cuisine" style="width:100%">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+                <article>
+                    <h2>Local Cuisine</h2>
+                    <p class="w3-justify">The food in Varanasi is a delightful experience for the senses. The city is famous for its street food, offering a variety of savory and sweet treats. Tourists must try local specialties like **Kachori Sabzi** for breakfast, a crispy fried pastry served with a spicy potato curry. Cool down with a refreshing **Lassi**, a yogurt-based drink served in traditional clay cups (kulhads). And no trip is complete without trying the famous **Banarasi Paan**, a betel leaf preparation that is a cultural institution in itself.</p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w3-container w3-padding-32 w3-center">
+    <div class="w3-xlarge w3-padding-16">
+        <!-- Social Media Icons for the Website -->
+        <a href="#" class="w3-button w3-hover-opacity" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 Varanasi Tourism | A Project by Saurabh Pandey</p>
+    <a href="#" class="w3-button w3-black w3-margin-top"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', applySavedTheme);
+      function toggleMenu() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+        else { x.className = x.className.replace(" w3-show", ""); }
+      }
+    </script>
+</body>
+</html>

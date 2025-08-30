@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varanasi Tourism - Welcome</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="index.html" class="w3-bar-item w3-button w3-wide">VARANASI</a>
+        <div class="w3-right w3-hide-small">
+          <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+          <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="places.html" class="w3-bar-item w3-button">PLACES</a>
+          <a href="culture.html" class="w3-bar-item w3-button">CULTURE & FOOD</a>
+          <a href="gallery.html" class="w3-bar-item w3-button">GALLERY</a>
+          <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="toggleTheme()">
+          <i class="fa fa-moon-o" id="theme-icon"></i>
+        </a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (collapsible) -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top: 46px">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+      <a href="places.html" class="w3-bar-item w3-button w3-padding-large">PLACES</a>
+      <a href="culture.html" class="w3-bar-item w3-button w3-padding-large">CULTURE & FOOD</a>
+      <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large">GALLERY</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+    </div>
+
+    <!-- Main Page Content -->
+    <main>
+      <!-- Hero Section with Background Image -->
+      <header class="hero-image w3-display-container w3-center">
+        <div class="hero-text">
+          <h1 class="w3-xxlarge">Welcome to Varanasi</h1>
+          <p class="w3-xlarge">The Spiritual Capital of India</p>
+        </div>
+      </header>
+
+      <!-- Introduction Section -->
+      <section class="w3-container w3-content w3-padding-64" style="max-width: 800px">
+        <h2 class="w3-wide w3-center">ABOUT THE CITY</h2>
+        <p class="w3-opacity w3-center"><i>Experience divinity and heritage in one of the world's oldest living cities.</i></p>
+        <p class="w3-justify">
+          Varanasi, also known as Kashi, is a city on the banks of the river Ganges in northern India that holds a central place in the Hindu world. A city of pilgrimage, tradition, and vibrant culture, it has drawn scholars, seekers, and travelers for thousands of years. From its ancient ghats to its bustling markets, Varanasi offers an unforgettable journey into the heart of India.
+        </p>
+      </section>
+
+      <!-- Must-See Attractions Section -->
+      <section class="w3-container w3-light-grey w3-padding-64">
+        <h2 class="w3-wide w3-center">MUST-SEE ATTRACTIONS</h2>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+          
+          <div class="w3-third">
+            <div class="w3-card w3-white">
+              <img src="images/ghat.jpg" alt="The Ghats" style="width:100%">
+              <div class="w3-container">
+                <h3>The Ghats</h3>
+                <p class="w3-opacity">Steps to the Holy River</p>
+                <p>Varanasi is famous for its nearly 100 ghats, the stone steps leading to the Ganges where pilgrims perform sacred rituals and life unfolds daily.</p>
+                <p><a href="places.html" class="w3-button w3-black w3-margin-bottom">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third">
+            <div class="w3-card w3-white">
+              <img src="images/vishwanath-ji.jpg" alt="Kashi Vishwanath" style="width:100%">
+              <div class="w3-container">
+                <h3>Kashi Vishwanath Temple</h3>
+                <p class="w3-opacity">The Golden Temple</p>
+                <p>One of the most revered Hindu temples, dedicated to Lord Shiva, the Kashi Vishwanath Temple is a cornerstone of spiritual life in the city.</p>
+                <p><a href="places.html" class="w3-button w3-black w3-margin-bottom">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-third">
+            <div class="w3-card w3-white">
+              <img src="images/sarnath.jpg" alt="Sarnath" style="width:100%">
+              <div class="w3-container">
+                <h3>Sarnath</h3>
+                <p class="w3-opacity">The Dawn of Buddhism</p>
+                <p>Just a short journey from Varanasi, Sarnath is the historic site where the Buddha gave his first sermon after attaining enlightenment.</p>
+                <p><a href="places.html" class="w3-button w3-black w3-margin-bottom">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Experience Culture Section -->
+      <section class="w3-container w3-content w3-padding-64">
+          <div class="w3-row">
+              <div class="w3-col m6 w3-padding-large">
+                 <h2 class="w3-wide">EXPERIENCE THE CULTURE</h2>
+                 <p class="w3-opacity"><i>Artistry Woven in Silk</i></p>
+                 <p class="w3-justify">Varanasi is renowned for its master weavers who create the world-famous Banarasi silk saris. These exquisite garments, often featuring intricate brocades of gold and silver thread, are a symbol of Indian tradition and artistry passed down through generations. Exploring the weavers' quarters reveals a rich syncretic culture and a craft that is the city's commercial backbone.</p>
+                 <p><a href="culture.html" class="w3-button w3-black">Explore Culture & Food</a></p>
+              </div>
+              <div class="w3-col m6 w3-padding-large w3-hide-small">
+                 <img src="images/weavers.jpeg" class="w3-round w3-image w3-opacity-min" alt="Banarasi Silk" style="width:100%">
+              </div>
+          </div>
+      </section>
+
+    </main>
+
+    <footer class="w3-container w3-padding-32 w3-center">
+    <div class="w3-xlarge w3-padding-16">
+        <!-- Social Media Icons for the Website -->
+        <a href="#" class="w3-button w3-hover-opacity" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 Varanasi Tourism | A Project by Saurabh Pandey</p>
+    <a href="#" class="w3-button w3-black w3-margin-top"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+    
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', applySavedTheme);
+      function toggleMenu() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+        else { x.className = x.className.replace(" w3-show", ""); }
+      }
+    </script>
+  </body>
+</html>
+

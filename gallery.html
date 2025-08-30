@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery - Varanasi Tourism</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Add some custom styles for the gallery */
+        .gallery-img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .gallery-img:hover {
+            opacity: 0.7;
+        }
+        /* Style for the modal */
+        .w3-modal-content {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="index.html" class="w3-bar-item w3-button w3-wide">VARANASI</a>
+        <div class="w3-right w3-hide-small">
+          <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+          <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="places.html" class="w3-bar-item w3-button">PLACES</a>
+          <a href="culture.html" class="w3-bar-item w3-button">CULTURE & FOOD</a>
+          <a href="gallery.html" class="w3-bar-item w3-button">GALLERY</a>
+          <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="toggleTheme()">
+            <i class="fa fa-moon-o" id="theme-icon"></i>
+        </a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (collapsible) -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top: 46px">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+      <a href="places.html" class="w3-bar-item w3-button w3-padding-large">PLACES</a>
+      <a href="culture.html" class="w3-bar-item w3-button w3-padding-large">CULTURE & FOOD</a>
+      <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large">GALLERY</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+    </div>
+
+    <!-- Main Page Content -->
+    <main class="w3-container w3-content w3-padding-64" style="max-width:1200px">
+        <h1 class="w3-center w3-wide">IMAGE GALLERY</h1>
+        <p class="w3-center w3-opacity">A glimpse into the soul of Varanasi. Click on any image to enlarge.</p>
+
+        <!-- Image Grid -->
+        <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+                <img src="images/ghats-vns.jpg" style="width:100%" alt="Ghats of Varanasi" class="gallery-img" onclick="openModal(this)">
+            </div>
+            <div class="w3-quarter">
+                <img src="images/ganga-aarti.jpg" style="width:100%" alt="Evening Ganga Aarti" class="gallery-img" onclick="openModal(this)">
+            </div>
+            <div class="w3-quarter">
+                <img src="images/vishwanath-ji.jpg" style="width:100%" alt="Temples" class="gallery-img" onclick="openModal(this)">
+            </div>
+            <div class="w3-quarter">
+                <img src="images/foods.jpg" style="width:100%" alt="Local Cuisine" class="gallery-img" onclick="openModal(this)">
+            </div>
+        </div>
+        
+        <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+                <img src="images/baba.jpg" style="width:100%" alt="Sadhus" class="gallery-img" onclick="openModal(this)">
+            </div>
+            <div class="w3-quarter">
+                <img src="images/boats.jpg" style="width:100%" alt="Boats on Ganges" class="gallery-img" onclick="openModal(this)">
+            </div>
+            <div class="w3-quarter">
+                <img src="images/silk-wiever.jpeg" style="width:100%" alt="Banarasi Silk Weaving" class="gallery-img" onclick="openModal(this)">
+            </div>
+            <div class="w3-quarter">
+                <img src="images/dev-depawali.jpg" style="width:100%" alt="Dev Deepawali Festival" class="gallery-img" onclick="openModal(this)">
+            </div>
+        </div>
+    </main>
+
+    <!-- The Modal (Lightbox) -->
+    <div id="imageModal" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="modalImage" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <footer class="w3-container w3-padding-32 w3-center">
+    <div class="w3-xlarge w3-padding-16">
+        <!-- Social Media Icons for the Website -->
+        <a href="#" class="w3-button w3-hover-opacity" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 Varanasi Tourism | A Project by Saurabh Pandey</p>
+    <a href="#" class="w3-button w3-black w3-margin-top"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      // The applySavedTheme function is now called from within script.js
+      //It ensures the saved theme is applied when the page loads.
+      document.addEventListener('DOMContentLoaded', applySavedTheme);
+      function toggleMenu() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+        else { x.className = x.className.replace(" w3-show", ""); }
+      }
+
+      // JavaScript for the Image Modal
+      function openModal(element) {
+        document.getElementById("modalImage").src = element.src;
+        document.getElementById("imageModal").style.display = "block";
+        document.getElementById("caption").innerHTML = element.alt;
+      }
+    </script>
+</body>
+</html>

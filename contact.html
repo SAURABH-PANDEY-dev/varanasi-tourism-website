@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Varanasi Tourism</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="index.html" class="w3-bar-item w3-button w3-wide">VARANASI</a>
+        <div class="w3-right w3-hide-small">
+          <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+          <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="places.html" class="w3-bar-item w3-button">PLACES</a>
+          <a href="culture.html" class="w3-bar-item w3-button">CULTURE & FOOD</a>
+          <a href="gallery.html" class="w3-bar-item w3-button">GALLERY</a>
+          <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right" onclick="toggleTheme()">
+            <i class="fa fa-moon-o" id="theme-icon"></i>
+        </a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (collapsible) -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top: 46px">
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+      <a href="places.html" class="w3-bar-item w3-button w3-padding-large">PLACES</a>
+      <a href="culture.html" class="w3-bar-item w3-button w3-padding-large">CULTURE & FOOD</a>
+      <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large">GALLERY</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+    </div>
+
+    <!-- Main Page Content -->
+    <main class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h1 class="w3-center w3-wide">CONTACT US</h1>
+        <p class="w3-center w3-opacity"><em>Have a question? Drop us a line!</em></p>
+
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <p><i class="fa fa-map-marker" style="width:30px"></i> Varanasi, UP, India</p>
+                <p><i class="fa fa-phone" style="width:30px"></i> Phone: +00 123456</p>
+                <p><i class="fa fa-envelope" style="width:30px"> </i> Email: mail@example.com</p>
+            </div>
+            <div class="w3-col m6">
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" id="name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email" id="email">
+                        </div>
+                    </div>
+                    <textarea class="w3-input w3-border" placeholder="Message" required name="Message" id="message" style="height: 150px;"></textarea>
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="w3-container w3-padding-32">
+            <h2 class="w3-center w3-wide">OUR LOCATION</h2>
+            <!-- This iframe embeds an interactive Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115420.2198182902!2d82.92116395350997!3d25.32098254922579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db5b24b062d%3A0x2570b69c7a65e648!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1664548325992!5m2!1sen!2sin" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+
+    <footer class="w3-container w3-padding-32 w3-center">
+    <div class="w3-xlarge w3-padding-16">
+        <!-- Social Media Icons for the Website -->
+        <a href="#" class="w3-button w3-hover-opacity" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="w3-button w3-hover-opacity" title="Twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 Varanasi Tourism | A Project by Saurabh Pandey</p>
+    <a href="#" class="w3-button w3-black w3-margin-top"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      // The applySavedTheme function is now called from within script.js
+      // . It ensures the saved theme is applied when the page loads.
+      document.addEventListener('DOMContentLoaded', applySavedTheme);
+      function toggleMenu() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; } 
+        else { x.className = x.className.replace(" w3-show", ""); }
+      }
+    </script>
+</body>
+</html>
