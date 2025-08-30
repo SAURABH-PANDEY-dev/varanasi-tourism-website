@@ -1,7 +1,7 @@
 Varanasi Tourism Website
 This is a static, responsive website created as a project for the NIELIT 'O' Level certification. The website serves as a comprehensive tourism guide to the city of Varanasi, India.
 
-Live Demo1: https://varanasi-tourism-website.netlify.app/
+Live Demo1: https://varanasi-tourism-website.netlify.app/ <br>
 Live Demo2: https://saurabh-pandey-dev.github.io/varanasi-tourism-website/
 
 Project Overview
@@ -38,3 +38,4 @@ Open the project folder.
 
 
 Open the index.html file in your web browser.
+
